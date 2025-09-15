@@ -8,17 +8,32 @@ class Program
 
         for (int i = 1; i <= poziomy; i++)
         {
-            for (int j = 0; j <= ((((poziomy * 2) - 1) / 2)-i); j++)
+            if (i == 1)
             {
-                Console.Write(" ");
+                for (int j = 0; j <= ((((poziomy * 2) - 1) / 2) - i); j++)
+                {
+                    Console.Write(" ");
+                }
+
+                Console.WriteLine("*");
             }
-            for (int k = 1; k <= (i*2-1); k++)
+            else
             {
-                Console.Write("*");
+                for (int j = 0; j <= ((((poziomy * 2) - 1) / 2) - i); j++)
+                {
+                    Console.Write(" ");
+                }
+
+                Console.Write("/");
+                for (int k = 1; k <= (i * 2 - 3); k++)
+                {
+                    Console.Write("*");
+                }
+
+                Console.WriteLine("\\");
             }
-            Console.WriteLine();
         }
-        
+
         // Random rnd = new Random();
         // int rand_numb  = rnd.Next(0, 101);
         //
